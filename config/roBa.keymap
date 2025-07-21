@@ -76,13 +76,17 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+
         sw_mac: macro {
             label = "SW_MAC";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+
             // 1️⃣ BT プロファイル 0 を選択 → 2️⃣ Mac レイヤーへ遷移
+
             bindings = <&bt BT_SEL 0 &to _MAC>;
         };
+
         sw_win: macro {
             label = "SW_WIN";
             compatible = "zmk,behavior-macro";
@@ -107,10 +111,10 @@
 
         FUNCTION {
             bindings = <
-&kp SQT      &kp DOUBLE_QUOTES  &kp EQUAL   &none  &kp TILDE                         &kp INT_YEN    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL  &kp F5
-&kp AT_SIGN  &kp SEMICOLON      &kp DOLLAR  &none  &kp PIPE        &kp      &kp F13  &kp HASH       &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PLUS   &kp ASTERISK
-&kp          &kp EXCLAMATION    &kp COLON   &none  &kp UNDERSCORE  &kp      &kp      &kp AMPERSAND  &kp LEFT_BRACE        &kp LEFT_BRACE         &kp MINUS  &kp SLASH
-&trans       &trans             &trans      &kp    &kp             &kp      &kp      &kp                                                                    &kp F12
+&kp SQT      &kp DOUBLE_QUOTES  &kp EQUAL   &none   &kp TILDE                            &kp INT_YEN    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL  &kp F5
+&kp AT_SIGN  &kp SEMICOLON      &kp DOLLAR  &none   &kp PIPE        &trans      &kp F13  &kp HASH       &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PLUS   &kp ASTERISK
+&trans       &kp EXCLAMATION    &kp COLON   &none   &kp UNDERSCORE  &trans      &trans   &kp AMPERSAND  &kp LEFT_BRACE        &kp LEFT_BRACE         &kp MINUS  &kp SLASH
+&trans       &trans             &trans      &trans  &trans          &trans      &trans   &trans                                                                 &kp F12
             >;
         };
 
