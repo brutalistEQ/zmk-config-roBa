@@ -120,7 +120,7 @@
 
         NUM {
             bindings = <
-&kp ESC                     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PLUS                                        &trans          &kp BACKSPACE   &trans        &kp DELETE  &trans
+&kp ESC                     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp MINUS                                       &trans          &kp BACKSPACE   &trans        &kp DELETE  &trans
 &kp TAB                     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_NUMBER_0  &trans         &kp UNDERSCORE  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT   &trans
 &mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PERIOD       &kp COLON      &trans          &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END     &trans
 &trans                      &trans           &trans           &trans           &trans           &trans         &trans          &trans                                                    &trans
