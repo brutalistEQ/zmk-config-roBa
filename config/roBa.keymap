@@ -84,14 +84,14 @@
 
             // 1️⃣ BT プロファイル 0 を選択 → 2️⃣ Mac レイヤーへ遷移
 
-            bindings = <&bt BT_SEL 0 &to _MAC>;
+            bindings = <&bt BT_SEL 0 &to 0>;
         };
 
         sw_win: sw_win {
             label = "SW_WIN";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 1 &to _WIN>;
+            bindings = <&bt BT_SEL 1 &to 2>;
         };
     };
 
@@ -100,13 +100,22 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R                        &kp T                                                          &kp Y        &kp U  &lt 5 I    &kp O    &kp P
-&kp A             &kp S         &kp D         &kp F                        &kp G        &kp LS(LG(S))                      &kp MINUS      &kp H        &kp J  &kp K      &kp L    &kp SQT
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                        &kp B        &kp COLON                          &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 INT_HENKAN  &lt 2 SPACE  &lt_to_layer_0 3 INT_MUHENKAN      &kp BACKSPACE  &lt 1 ENTER                             &kp DEL
+&kp Q             &kp W         &kp E         &kp R                   &kp T                                                   &kp Y        &kp U  &lt 6 I    &kp O    &kp P
+&kp A             &kp S         &kp D         &kp F                   &kp G        &kp LS(LG(S))               &kp SQT        &kp H        &kp J  &kp K      &kp L    &kp MINUS
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                   &kp B        &kp COLON                   &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 7 LANG2  &lt 2 SPACE  &lt_to_layer_0 4 LANG1      &kp BACKSPACE  &lt 3 ENTER                             &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+        };
+
+        layer_7 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+            >;
         };
 
         FUNCTION {
@@ -114,7 +123,7 @@
 &kp SQT      &kp DOUBLE_QUOTES  &kp EQUAL   &none   &kp TILDE                            &kp INT_YEN    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL  &kp PERCENT
 &kp AT_SIGN  &kp SEMICOLON      &kp DOLLAR  &none   &kp PIPE        &trans      &kp F13  &kp HASH       &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PLUS   &kp ASTERISK
 &trans       &kp EXCLAMATION    &kp COLON   &none   &kp UNDERSCORE  &trans      &trans   &kp AMPERSAND  &kp LEFT_BRACE        &kp LEFT_BRACE         &kp MINUS  &kp SLASH
-&trans       &trans             &trans      &trans  &trans          &trans      &trans   &trans                                                                 &trans
+&trans       &trans             &trans      &trans  &trans          &trans      &trans   &mo 7                                                                  &trans
             >;
         };
 
@@ -123,7 +132,7 @@
 &kp ESC                     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp MINUS                                       &trans          &kp BACKSPACE   &trans        &kp DELETE  &trans
 &kp TAB                     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_NUMBER_0  &trans         &kp UNDERSCORE  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT   &trans
 &mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PERIOD       &kp COLON      &trans          &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END     &trans
-&trans                      &trans           &trans           &trans           &trans           &trans         &trans          &trans                                                    &trans
+&trans                      &trans           &trans           &trans           &mo 7            &trans         &trans          &trans                                                    &trans
             >;
         };
 
@@ -141,7 +150,7 @@
         MOUSE {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mo 5     &mkp MB2  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mo 6     &mkp MB2  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB4  &mkp MB3  &mkp MB5  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &trans
             >;
@@ -156,7 +165,7 @@
             >;
         };
 
-        layer_6 {
+        blutooth {
             bindings = <
 &trans  &trans        &trans        &trans        &trans                           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
 &trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans        &trans        &trans        &trans        &trans
