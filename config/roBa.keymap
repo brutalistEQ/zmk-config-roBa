@@ -100,10 +100,10 @@
 
         default_mac_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R                   &kp T                                                   &kp Y        &kp U  &lt 6 I    &kp O    &kp P
-&kp A             &kp S         &kp D         &kp F                   &kp G        &kp LS(LG(S))               &kp SQT        &kp H        &kp J  &kp K      &kp L    &kp MINUS
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                   &kp B        &kp COLON                   &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 7 LANG2  &lt 2 SPACE  &lt_to_layer_0 4 LANG1      &kp BACKSPACE  &lt 3 ENTER                             &kp DEL
+&kp Q             &kp W             &kp E             &kp R                   &kp T                                                   &kp Y        &kp U               &lt 6 I           &kp O           &kp P
+&kp A             &mt LEFT_ALT S    &mt LEFT_SHIFT D  &mt RIGHT_COMMAND F     &kp G        &kp LS(LG(S))               &kp SQT        &kp H        &mt LEFT_COMMAND J  &mt LEFT_SHIFT K  &mt LEFT_ALT L  &mt LEFT_CONTROL MINUS
+&mt LEFT_SHIFT Z  &kp X             &kp C             &kp V                   &kp B        &kp COLON                   &kp SEMICOLON  &kp N        &kp M               &kp COMMA         &kp DOT         &kp SLASH
+&kp LEFT_COMMAND  &kp LEFT_CONTROL  &kp LEFT_ALT      &lt_to_layer_0 7 LANG2  &lt 2 SPACE  &lt_to_layer_0 4 LANG1      &kp BACKSPACE  &lt 3 ENTER                                                        &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -111,10 +111,10 @@
 
         default_win_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R                   &kp T                                                   &kp Y        &kp U  &lt 6 I    &kp O    &kp P
-&kp A             &kp S         &kp D         &kp F                   &kp G        &kp LS(LG(S))               &kp SQT        &kp H        &kp J  &kp K      &kp L    &kp MINUS
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                   &kp B        &kp COLON                   &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 7 LANG2  &lt 2 SPACE  &lt_to_layer_0 4 LANG1      &kp BACKSPACE  &lt 3 ENTER                             &kp DEL
+&kp Q             &kp W           &kp E             &kp R                   &kp T                                                   &kp Y        &kp U               &lt 6 I           &kp O           &kp P
+&kp A             &mt LEFT_ALT S  &mt LEFT_SHIFT D  &mt LCTRL F             &kp G        &kp LS(LG(S))               &kp SQT        &kp H        &mt LEFT_CONTROL J  &mt LEFT_SHIFT K  &mt LEFT_ALT L  &mt LEFT_GUI MINUS
+&mt LEFT_SHIFT Z  &kp X           &kp C             &kp V                   &kp B        &kp COLON                   &kp SEMICOLON  &kp N        &kp M               &kp COMMA         &kp DOT         &kp SLASH
+&kp LEFT_CONTROL  &kp LEFT_GUI    &kp LEFT_ALT      &lt_to_layer_0 7 LANG2  &lt 2 SPACE  &lt_to_layer_0 4 LANG1      &kp BACKSPACE  &lt 3 ENTER                                                        &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
