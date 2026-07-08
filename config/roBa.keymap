@@ -12,8 +12,8 @@
 #define _FN 6
 #define _BT 7
 #define _WIN_NUM_NAV 8
-#define ENC_SCROLL_UP MOVE_Y(90)
-#define ENC_SCROLL_DOWN MOVE_Y(-90)
+#define ENC_SCROLL_UP MOVE_Y(80)
+#define ENC_SCROLL_DOWN MOVE_Y(-80)
 
 &mt {
     flavor = "balanced";
