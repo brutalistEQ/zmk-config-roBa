@@ -84,11 +84,13 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
+
         /*
          * Windows:
          * Hold Left Alt, tap Tab, then keep Left Alt held
          * until this macro key is released.
          */
+
         win_app_switch: win_app_switch {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -101,11 +103,13 @@
                 <&macro_release>,
                 <&kp LALT>;
         };
+
         /*
          * macOS:
          * Hold Left Command, tap Tab, then keep Command held
          * until this macro key is released.
          */
+
         mac_app_switch: mac_app_switch {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -190,9 +194,9 @@
 
         default_mac_layer {
             bindings = <
-&kp Q               &kp W             &kp E             &kp R                   &kp T                                                   &kp Y        &kp U               &lt 5 I           &kp O           &kp P
-&mt LEFT_CONTROL A  &mt LEFT_ALT S    &mt LEFT_SHIFT D  &mt RIGHT_COMMAND F     &kp G        &kp LS(LG(S))               &kp SQT        &kp H        &mt LEFT_COMMAND J  &mt LEFT_SHIFT K  &mt LEFT_ALT L  &mt LEFT_CONTROL MINUS
-&mt LEFT_SHIFT Z    &kp X             &kp C             &kp V                   &kp B        &kp COLON                   &kp SEMICOLON  &kp N        &kp M               &kp COMMA         &kp DOT         &kp SLASH
+&kp Q               &kp W             &kp E             &kp R                               &kp T                                                   &kp Y        &kp U               &lt 5 I           &kp O           &kp P
+&mt LEFT_CONTROL A  &mt LEFT_ALT S    &mt LEFT_SHIFT D  &mt RIGHT_COMMAND F                 &kp G        &kp LS(LG(S))               &kp SEMICOLON  &kp H        &mt LEFT_COMMAND J  &mt LEFT_SHIFT K  &mt LEFT_ALT L  &mt LEFT_CONTROL MINUS
+&mt LEFT_SHIFT Z    &kp X             &kp C             &kp V                               &kp B        &mac_app_switch             &kp COLON      &kp N        &kp M               &kp COMMA         &kp DOT         &kp SLASH
 &kp LEFT_COMMAND    &kp LEFT_CONTROL  &kp LEFT_ALT      &shift_to_layer_0 LEFT_SHIFT LANG2  &lt 2 SPACE  &lt_to_layer_0 0 LANG1      &kp BACKSPACE  &lt 3 ENTER                                                        &lt 4 ESCAPE
             >;
 
@@ -201,9 +205,9 @@
 
         default_win_layer {
             bindings = <
-&kp Q             &kp W           &kp E             &kp R                   &kp T                                                   &kp Y        &kp U               &lt 5 I           &kp O           &kp P
-&mt LEFT_GUI A    &mt LEFT_ALT S  &mt LEFT_SHIFT D  &mt LCTRL F             &kp G        &kp LS(LG(S))               &kp SQT        &kp H        &mt LEFT_CONTROL J  &mt LEFT_SHIFT K  &mt LEFT_ALT L  &mt LEFT_GUI MINUS
-&mt LEFT_SHIFT Z  &kp X           &kp C             &kp V                   &kp B        &kp COLON                   &kp SEMICOLON  &kp N        &kp M               &kp COMMA         &kp DOT         &kp SLASH
+&kp Q             &kp W           &kp E             &kp R                               &kp T                                                   &kp Y        &kp U               &lt 5 I           &kp O           &kp P
+&mt LEFT_GUI A    &mt LEFT_ALT S  &mt LEFT_SHIFT D  &mt LCTRL F                         &kp G        &kp LS(LG(S))               &kp SEMICOLON  &kp H        &mt LEFT_CONTROL J  &mt LEFT_SHIFT K  &mt LEFT_ALT L  &mt LEFT_GUI MINUS
+&mt LEFT_SHIFT Z  &kp X           &kp C             &kp V                               &kp B        &win_app_switch             &kp COLON      &kp N        &kp M               &kp COMMA         &kp DOT         &kp SLASH
 &kp LEFT_CONTROL  &kp LEFT_GUI    &kp LEFT_ALT      &shift_to_layer_0 LEFT_SHIFT LANG2  &lt 2 SPACE  &lt_to_layer_0 0 LANG1      &kp BACKSPACE  &lt 3 ENTER                                                        &lt 4 ESCAPE
             >;
 
